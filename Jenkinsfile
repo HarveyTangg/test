@@ -30,7 +30,8 @@ pipeline {
                 script {
                     sh 'export PATH=/usr/local/go/bin:$PATH && \
                       env && \
-                      go version'
+                      go version && \
+                      aws --version'
                 }
             }
         }
