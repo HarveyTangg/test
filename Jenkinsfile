@@ -2,6 +2,17 @@ pipeline {
     agent any
  
     stages {
+        stage('Clean') {
+            steps {
+                sh 'rm -rf ./*'
+            }
+            
+            post {
+                success {
+                    echo 'Clean successfully'
+                }
+            }
+        }
         stage('Git') {
             steps {
                 script {
@@ -21,17 +32,6 @@ pipeline {
                     sh 'env'
                     sh 'ls /usr/local/go/bin/go'
                     //sh 'go version'
-                }
-            }
-        }
-        stage('Clean') {
-            steps {
-                sh 'rm -rf ./*'
-            }
-            
-            post {
-                success {
-                    echo 'Clean successfully'
                 }
             }
         }
