@@ -13,14 +13,12 @@ pipeline {
         
         stage('Build') {
             environment { 
-                    PATH= sh (returnStdout: true, script: 'echo /opt/apache-maven-3.9.0/bin:$PATH').trim()
+                   
             }
             steps {
                 script {
-                    //sh 'export PATH=/opt/apache-maven-3.9.0/bin:$PATH'
                     sh 'env'
-                    sh 'echo $PATH'
-                  
+                    sh 'go version'
                 }
             }
         }
