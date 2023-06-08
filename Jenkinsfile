@@ -17,13 +17,10 @@ pipeline {
             }
             steps {
                 script {
-                    echo 'go_build: ' + go_build
                     //sh 'export PATH=/opt/apache-maven-3.9.0/bin:$PATH'
                     sh 'env'
                     sh 'echo $PATH'
-                    if( go_build.toBoolean() ) {
-          
-                    } 
+                  
                 }
             }
         }
