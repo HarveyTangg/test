@@ -28,10 +28,9 @@ pipeline {
             //}
             steps {
                 script {
-                    sh 'export PATH=/usr/local/go/bin/go:$PATH'
-                    sh 'env'
-                    sh 'ls /usr/local/go/bin'
-                    //sh 'go version'
+                    sh 'export PATH=/usr/local/go/bin:$PATH && \
+                      env && \
+                      go version'
                 }
             }
         }
