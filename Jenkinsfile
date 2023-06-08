@@ -17,7 +17,7 @@ pipeline {
             //}
             steps {
                 script {
-                    sh 'export PATH=/usr/local/go/bin:$PATH'
+                    sh 'export PATH=/usr/local/go/bin/go:$PATH'
                     sh 'env'
                     sh 'go version'
                 }
