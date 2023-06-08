@@ -12,9 +12,9 @@ pipeline {
         } 
         
         stage('Build') {
-            environment { 
+            //environment { 
                    
-            }
+            //}
             steps {
                 script {
                     sh 'env'
