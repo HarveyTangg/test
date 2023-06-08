@@ -24,5 +24,16 @@ pipeline {
                 }
             }
         }
+        stage('Clean') {
+            steps {
+                sh 'rm -rf ./*'
+            }
+            
+            post {
+                success {
+                    echo 'Clean successfully'
+                }
+            }
+        }
     }
 }
